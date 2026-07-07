@@ -14,7 +14,7 @@ services:
         generateValue: true
       # Supabase Database Connection - FIXED
       - key: DATABASE_URL
-        value: postgresql://postgres:VT4cCEcLt?&$kAz@db.iuamhttnlmolwtrctzeg.supabase.co:5432/postgres
+        value: postgresql://postgres:VT4cCEcLt%3F%26%24kAz@db.iuamhttnlmolwtrctzeg.supabase.co:5432/postgres
       # OpenAI-Compatible DeepSeek API
       - key: LLM_PROVIDER
         value: openai-compatible
