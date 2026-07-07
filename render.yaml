@@ -12,10 +12,10 @@ services:
         value: 8080
       - key: API_MASTER_KEY
         generateValue: true
-      # Supabase Database Connection - FIXED
+      # Supabase Database Connection - URL ENCODED PASSWORD
       - key: DATABASE_URL
         value: postgresql://postgres:VT4cCEcLt%3F%26%24kAz@db.iuamhttnlmolwtrctzeg.supabase.co:5432/postgres
-      # OpenAI-Compatible DeepSeek API
+      # DeepSeek API
       - key: LLM_PROVIDER
         value: openai-compatible
       - key: OPENAI_API_KEY
@@ -26,3 +26,5 @@ services:
         value: deepseek-chat
       - key: DISABLE_WELCOME_MESSAGE
         value: "true"
+      - key: DATABASE_TYPE
+        value: postgres
