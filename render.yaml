@@ -1,4 +1,3 @@
-
 services:
   - type: web
     name: studysmart-openwa
@@ -13,14 +12,14 @@ services:
         value: 8080
       - key: API_MASTER_KEY
         generateValue: true
-      # Supabase Connection Details
-      - key: https://iuamhttnlmolwtrctzeg.supabase.co
-        value: postgresql://postgres:VT4cCEcLt?&$kAz@db.VT4cCEcLt?&$kAz.supabase.co:5432/postgres
+      # Supabase Database Connection - FIXED
+      - key: DATABASE_URL
+        value: postgresql://postgres:VT4cCEcLt?&$kAz@db.iuamhttnlmolwtrctzeg.supabase.co:5432/postgres
       # OpenAI-Compatible DeepSeek API
       - key: LLM_PROVIDER
         value: openai-compatible
       - key: OPENAI_API_KEY
-        value: sk-f9111ca44dcd430aacbf0d73b117e3f7
+        value: sk-f9111ca44...0d73b1171ww
       - key: OPENAI_BASE_URL
         value: https://api.deepseek.com/v1
       - key: OPENAI_MODEL
