@@ -1,1 +1,29 @@
 
+services:
+  - type: web
+    name: studysmart-openwa
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 8080
+      - key: API_MASTER_KEY
+        generateValue: true
+      # Supabase Connection Details
+      - key: https://iuamhttnlmolwtrctzeg.supabase.co
+        value: postgresql://postgres:VT4cCEcLt?&$kAz@db.VT4cCEcLt?&$kAz.supabase.co:5432/postgres
+      # OpenAI-Compatible DeepSeek API
+      - key: LLM_PROVIDER
+        value: openai-compatible
+      - key: OPENAI_API_KEY
+        value: sk-f9111ca44dcd430aacbf0d73b117e3f7
+      - key: OPENAI_BASE_URL
+        value: https://api.deepseek.com/v1
+      - key: OPENAI_MODEL
+        value: deepseek-chat
+      - key: DISABLE_WELCOME_MESSAGE
+        value: "true"
